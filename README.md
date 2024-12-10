@@ -29,7 +29,7 @@ git clone https://github.com/your-username/translate-text.git
 Include the `translateText` function in your project.
 
 ### Example Usage
-
+g
 ```javascript
 const translationConfig = {
   body: 'Hello, world!',

@@ -8,7 +8,7 @@
  * @param {string} apiUrl - The translation API endpoint.
  * @returns {Promise<object|null>} - The translated data or null in case of an error.
  */
-async function translateText({ body, sourceLanguage, targetLanguage, modelId, apiKey, apiUrl }) {
+async function translateText({ body, sourceLanguage, targetLanguage, modelId, oauthtoken, apiUrl }) {
     const requestData = {
       source_language_code: sourceLanguage,
       target_language_code: targetLanguage,
@@ -20,7 +20,7 @@ async function translateText({ body, sourceLanguage, targetLanguage, modelId, ap
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': `Bearer ${oauthtoken}`,
           'Content-Type': 'application/json; charset=utf-8',
         },
         body: JSON.stringify(requestData),
@@ -44,7 +44,7 @@ async function translateText({ body, sourceLanguage, targetLanguage, modelId, ap
     sourceLanguage: 'en',
     targetLanguage: 'de',
     modelId: 'projects/YOUR_PROJECT_ID/locations/YOUR_LOCATION/models/YOUR_MODEL_ID',
-    apiKey: 'YOUR_API_KEY',
+    oauthtoken: 'YOUR_API_KEY',
     apiUrl: 'https://translation.googleapis.com/v3/projects/YOUR_PROJECT_ID/locations/YOUR_LOCATION:translateText',
   };
   
