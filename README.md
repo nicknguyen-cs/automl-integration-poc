@@ -9,7 +9,7 @@ Before using this function, ensure the following:
 
 1. **Google Cloud Translation API** is enabled in your Google Cloud Project.
 2. Obtain the following:
-   - **API Key**: For authorization.
+   - **OAuth Token**: For authorization.
    - **Model ID**: Translation model identifier.
    - **API Endpoint**: URL for the Translation API.
 
@@ -36,7 +36,7 @@ const translationConfig = {
   sourceLanguage: 'en',
   targetLanguage: 'de',
   modelId: 'projects/YOUR_PROJECT_ID/locations/YOUR_LOCATION/models/YOUR_MODEL_ID',
-  apiKey: 'YOUR_API_KEY',
+  oauthtoken: 'YOUR_API_KEY',
   apiUrl: 'https://translation.googleapis.com/v3/projects/YOUR_PROJECT_ID/locations/YOUR_LOCATION:translateText',
 };
 
@@ -53,7 +53,7 @@ translateText(translationConfig).then((result) => {
 | `sourceLanguage`  | String | Language code of the source text (e.g., `en` for English).    |
 | `targetLanguage`  | String | Language code of the target text (e.g., `de` for German).     |
 | `modelId`         | String | Translation model ID provided by Google Cloud.               |
-| `apiKey`          | String | API key for authorization.                                   |
+| `oauthtoken`      | String | API key for authorization.                                   |
 | `apiUrl`          | String | Endpoint URL for the translation API.                        |
 
 ### Output
