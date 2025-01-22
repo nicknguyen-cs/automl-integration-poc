@@ -1,7 +1,7 @@
 # automl-integration-poc
 # TranslateText Function
 
-This repository contains a reusable and configurable JavaScript function for translating text using the Google Cloud Translation API. The function accepts dynamic inputs for text, source and target languages, model ID, OAuth2.0 Token, and API endpoint, making it easy to integrate with various projects.
+This repository contains a reusable and configurable JavaScript function for translating text using the Google Cloud Translation API. The function accepts dynamic inputs for text, source and target languages, model ID, OAuth2.0 Token, and API endpoint, making it easy to integrate with various projects. You can use this as part of middleware or in Contentstack as a code block in Automate.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ Before using this function, ensure the following:
 1. **Google Cloud Translation API** is enabled in your Google Cloud Project.
 2. Obtain the following:
    - **OAuth Token**: For authorization.
-     - You can generate the oAuth token via the generateToken.js file. The paste the output into your keyfile.
+     - You can generate the oAuth token via the **generateToken.js** file. The paste the output into your keyfile.
    - **Model ID**: Translation model identifier.
    - **API Endpoint**: URL for the Translation API.
 
